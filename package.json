@@ -1,0 +1,37 @@
+{
+  "name": "eddy-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/cjs/index.cjs",
+  "module": "./build/esm/index.mjs",
+  "exports": {
+    "require": "./build/cjs/index.cjs",
+    "import": "./build/esm/index.mjs"
+  },
+  "scripts": {
+    "preinstall": "only-allow pnpm",
+    "build": "rollup -c",
+    "relink": "link-module-alias"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "csvtojson": "^2.0.10",
+    "dataframe-js": "^1.4.4",
+    "fastify": "^3.20.1",
+    "got": "^12.0.0-beta.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.14.9",
+    "link-module-alias": "^1.2.0",
+    "only-allow": "^1.0.0",
+    "rollup": "^2.55.1"
+  },
+  "_moduleAliases": {
+    "$": ".",
+    "$src": "./src"
+  }
+}
